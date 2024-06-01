@@ -1,0 +1,31 @@
+apiVersion: apps/v1
+kind: Deployment 
+metadata: 
+  name: addtask-todo-deployment
+spec:
+  replicas: 1
+  selector:
+    matchExpressions:
+    - key: app
+      operator: In
+      values:
+      - addtask-todo-deployment
+  strategy:
+    rollingUpdate:
+      maxSurge: 1
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels: 
+        app: addtask-todo-deployment
+      name: addtask-todo-pod
+    spec:
+      containers:
+      - name: addtask-todo-container
+        env:
+        - name: CONNECTION_STRING 
+          value: Driver={ODBC Driver 17 for SQL Server};Server=tcp:mehul-db.database.windows.net,1433;Database=todo;Uid=mehuladmin;Pwd=ME@open#321;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;
+        image: mehul005a/addtask-microtodo:latest
+        ports:
+        - containerPort: 8000

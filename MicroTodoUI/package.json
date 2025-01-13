@@ -1,7 +1,7 @@
 {
   "name": "todo-app",
   "version": "0.1.0",
-  "homepage": "https://Mehul005a.github.io/TodoAppMicro",
+  "homepage": "https://Mehul005a.github.io/ToDoAppMicroServices",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.11.1",

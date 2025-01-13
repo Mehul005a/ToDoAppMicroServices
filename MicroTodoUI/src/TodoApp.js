@@ -4,6 +4,7 @@ import { Button, TextField, Container, Typography, Grid, Card, CardContent, Icon
 import { Delete } from '@mui/icons-material';
 import { Box } from '@mui/material';
 
+
 // Please update the below microservice URL's.
 const GET_TASKS_API_BASE_URL = 'http://localhost:8083';
 const DELETE_TASK_API_BASE_URL = 'http://localhost:8082';
@@ -13,6 +14,7 @@ const CREATE_TASK_API_BASE_URL = 'http://localhost:8081';
 // const UPDATE_TASK_API_BASE_URL = '';
 
 const backgroundImage = process.env.PUBLIC_URL + '/background.jpg';
+const titleImage = process.env.PUBLIC_URL + '/MJ.png';
 
 function TodoApp() {
     const [tasks, setTasks] = useState([]);
@@ -75,7 +77,7 @@ function TodoApp() {
                         margin: '8px',
                     }}
                 >
-                    <img src="/MJ.png" alt="My Logo" />
+                    <img src={titleImage} alt="My Logo" />
                     ToDo App
                 </Typography>
                 <div>

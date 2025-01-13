@@ -5,9 +5,9 @@ import { Delete } from '@mui/icons-material';
 import { Box } from '@mui/material';
 
 // Please update the below microservice URL's.
-const GET_TASKS_API_BASE_URL = 'http://localhost:8091';
-const DELETE_TASK_API_BASE_URL = 'http://localhost:8092';
-const CREATE_TASK_API_BASE_URL = 'http://localhost:8093';
+const GET_TASKS_API_BASE_URL = 'http://get-task.mahakjalan.online:8091';
+const DELETE_TASK_API_BASE_URL = 'http://delete-task.mahakjalan.online:8092';
+const CREATE_TASK_API_BASE_URL = 'http://add-task.mahakjalan.online:8093';
 
 //Update Task Functionality is Work In Progress
 // const UPDATE_TASK_API_BASE_URL = '';
@@ -70,7 +70,7 @@ function TodoApp() {
                         margin: '8px',
                     }}
                 >
-                    <img src="/MJ-removebg.png" alt="My Logo" />
+                    <img src="/MJ.png" alt="My Logo" />
                     ToDo App
                 </Typography>
                 <div>

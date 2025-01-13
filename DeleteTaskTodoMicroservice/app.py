@@ -6,7 +6,7 @@ from fastapi.middleware.cors import CORSMiddleware
 import os
 
 # Fetch the connection string from the environment variable
-connection_string = os.environ.get('CONNECTION_STRING')
+connection_string = 'Driver={ODBC Driver 17 for SQL Server};Server=tcp:mehulsqlserver.database.windows.net,1433;Database=mehul-db;Uid=mehuladmin;Pwd=ME@close#321;Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
 # Check if the connection string is available
 if connection_string:
